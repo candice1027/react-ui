@@ -1,5 +1,6 @@
 import React from 'react';
 import './importIcons'
+import './icon.scss'
 
 interface IconProps {
     name: String
@@ -7,8 +8,8 @@ interface IconProps {
 
 const Icon:React.FunctionComponent<IconProps> = (props)=>{
     return (
-        <span>
-           <svg>
+        <span >
+           <svg className="react-icon">
                <use xlinkHref={`#${props.name}`}></use>
            </svg>
         </span>
