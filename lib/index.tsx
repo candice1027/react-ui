@@ -1,4 +1,4 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from './button';
-ReactDOM.render(<Button />,document.getElementById('root'))
+import Icon from './icon';
+ReactDOM.render(<Icon name="wechat"/>,document.getElementById('root'))
