@@ -4,7 +4,7 @@ var HtmlWebapckPlugin = require('html-webpack-plugin')
 module.exports = {
     mode: 'development',
     devServer: {
-        contentBase: path.join(__dirname,'dist/lib'),
+        contentBase: path.join(__dirname),
         compress: true,
         port: 9000,
     },
@@ -27,8 +27,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebapckPlugin({
-            title: 'my first ts file',
-            filename: 'assets/index.html',   
+            title: 'react-ui',
+            template: 'index.html'  
         })
     ]
 }
