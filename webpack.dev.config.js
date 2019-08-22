@@ -12,6 +12,6 @@ module.exports = Object.assign({},base,{
         new HtmlWebapckPlugin({
             title: 'react-ui',
             template: 'index.html'  
-        })
+        }),
     ]
 })
