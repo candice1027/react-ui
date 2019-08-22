@@ -1,13 +1,5 @@
 var path = require('path');
-var { CleanWebpackPlugin } = require('clean-webpack-plugin');
-var HtmlWebapckPlugin = require('html-webpack-plugin')
 module.exports = {
-    mode: 'development',
-    devServer: {
-        contentBase: path.join(__dirname),
-        compress: true,
-        port: 9000,
-    },
     entry: {
         index: './lib/index.tsx'
     },
@@ -16,6 +8,9 @@ module.exports = {
         library: 'reactui',
         libraryTarget: 'umd'
     },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx']
+    },
     module: {
         rules: [
             { 
@@ -23,12 +18,5 @@ module.exports = {
                 loader: 'awesome-typescript-loader'
             }
         ]
-    },
-    plugins: [
-        new CleanWebpackPlugin(),
-        new HtmlWebapckPlugin({
-            title: 'react-ui',
-            template: 'index.html'  
-        })
-    ]
+    }, 
 }
