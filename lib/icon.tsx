@@ -6,15 +6,19 @@ import classnames from './utils/classnames';
 interface IconProps extends React.SVGAttributes<SVGElement>{
     name: string,
 }
-const Icon:React.FunctionComponent<IconProps> = (props) =>{
-    const {className,...rest} = props;
+const Icon:React.FunctionComponent<IconProps> = 
+    ({
+        className,
+        name,
+        ...rest
+    }) =>{
     return (
         <span>
             <svg 
                 className={classnames('react-icon' ,className)}
                 {...rest}
             >
-                <use xlinkHref={`#${props.name}`}></use>
+                <use xlinkHref={`#${name}`}></use>
             </svg>
         </span>
     )
