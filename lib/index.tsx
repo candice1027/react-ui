@@ -8,7 +8,7 @@ ReactDOM.render(
     <div>
         <Icon 
             name="wechat" 
-            className="hello"
+            className=" myicon "
             onClick={iconClickFn}
             onMouseLeave={()=>{console.log('leave')}}
             onMouseEnter={()=>{console.log('enter')}}
