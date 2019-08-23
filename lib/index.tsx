@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Icon from './icon';
-const iconClickFn = ()=>{
-    console.log('click')
+const iconClickFn:React.MouseEventHandler = (e)=>{
+    console.log(e)
 }
 ReactDOM.render(
     <div>
-        <Icon name="wechat" onClick={iconClickFn}/>
+        <Icon 
+            name="wechat" 
+            className="hello"
+            onClick={iconClickFn}
+            onMouseLeave={()=>{console.log('leave')}}
+            onMouseEnter={()=>{console.log('enter')}}
+        />
         <Icon name="setting" onClick={iconClickFn}/>
         <Icon name="location" onClick={iconClickFn}/>
     </div>,
