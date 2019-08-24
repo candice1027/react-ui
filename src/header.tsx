@@ -4,7 +4,7 @@ import './css/header.scss'
 
 export default function Header() {
     return (
-        <header>
+        <header className="web-header">
             <div className="logo">
                 this is header
             </div>    

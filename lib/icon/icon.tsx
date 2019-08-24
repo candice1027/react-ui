@@ -15,7 +15,7 @@ const Icon:React.FunctionComponent<IconProps> =
     return (
         <span>
             <svg 
-                className={classnames('react-icon' ,className)}
+                className={classnames('lv-ui_icon' ,className)}
                 {...rest}
             >
                 <use xlinkHref={`#${name}`}></use>

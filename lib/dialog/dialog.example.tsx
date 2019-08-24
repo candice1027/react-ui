@@ -7,7 +7,9 @@ export default function() {
     }
     return (
         <div>
-            <Dialog visible={isVisible}/>
+            <Dialog visible={isVisible}>
+                <p>这里是dialog内容</p>
+            </Dialog>
             <button onClick={changeDialogVisible}>click change</button>
         </div>
     )
