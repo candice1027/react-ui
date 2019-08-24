@@ -8,10 +8,13 @@ module.exports = Object.assign({},base,{
         compress: true,
         port: 9000,
     },
+    entry: {
+        example: './src/example.tsx'
+    },
     plugins: [
         new HtmlWebapckPlugin({
             title: 'react-ui',
-            template: 'index.html'  
+            template: 'example.html'  
         }),
     ]
 })
