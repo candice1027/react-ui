@@ -1,0 +1,6 @@
+[class^=lv-ui]{
+    box-sizing: border-box;
+    &::after,&::before {
+        box-sizing: border-box
+    }
+}

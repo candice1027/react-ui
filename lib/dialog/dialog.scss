@@ -1,3 +1,4 @@
+@import '../util.scss';
 .lv-dialog_mask {
     position: fixed;
     left: 0;
@@ -13,4 +14,34 @@
     transform: translate(-50%,-50%);
     border-radius: 5px;
     background-color: #fff;
+    min-width: 20em;
+    .lv-dialog_close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+        .close-icon{
+            width: 56px;
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }  
+    }
+    .lv-dialog_header {
+        padding: 16px 24px;
+        font-size: 24px;
+        border-bottom: 1px solid #dee2e6;
+    }
+    .lv-dialog_main {
+        min-height: 6em;
+    }
+    .lv-dialog_footer {
+        border-top: 1px solid #dee2e6;
+        display: flex;
+        justify-content: flex-end;
+        padding: 8px 16px;
+    }
 }

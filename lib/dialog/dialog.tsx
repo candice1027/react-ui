@@ -1,23 +1,25 @@
 import React, { Fragment } from 'react'
 import './dialog.scss'
 import Icon from '../icon/icon';
+import {scopeClassMaker} from '../utils/scopeclass'
 
 interface Props{
     visible: boolean
 }
-function joinClass(name?: string) {
-    return ['lv-dialog',name].filter(Boolean).join('_')
 
-}
+const joinClass = scopeClassMaker('lv-dialog')
+
 const Dialog: React.FunctionComponent<Props> = (props)=>{
     return (
         props.visible ? 
         <Fragment>
             <div className={joinClass('mask')}></div>
             <div className={joinClass('content')}>
-                <div className={joinClass('close')}>
-                    <Icon name="close" />
-                </div>
+                <button className={joinClass('close')}>
+                    <div className="close-icon">
+                        <Icon name="close" />
+                    </div>
+                </button>
                 <header className={joinClass('header')}>
                     title 提示
                 </header>

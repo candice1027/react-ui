@@ -13,14 +13,12 @@ const Icon:React.FunctionComponent<IconProps> =
         ...rest
     }) =>{
     return (
-        <span>
-            <svg 
-                className={classnames('lv-ui_icon' ,className)}
-                {...rest}
-            >
-                <use xlinkHref={`#${name}`}></use>
-            </svg>
-        </span>
+        <svg 
+            className={classnames('lv-ui_icon' ,className)}
+            {...rest}
+        >
+            <use xlinkHref={`#${name}`}></use>
+        </svg>
     )
 }
 export default Icon
