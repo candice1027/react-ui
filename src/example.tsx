@@ -1,18 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { HashRouter as Router} from 'react-router-dom'
 import './css/normalize.scss'
-// import Icon from '../lib/icon/icon';
-// import { Router, Route} from 'react-router'
 import Header from './header';
 import Sider from './aside';
 import Main from './main';
 
 ReactDOM.render(
-    <div>
-        <Header/>
-        <Sider/>
-        <Main/>
-        {/* <Icon name="wechat"/> */}
-    </div>,
+    <Router>
+        <div>
+            <Header/>
+            <Sider/>
+            <Main/>
+        </div>
+    </Router>,
    document.getElementById('root')
 )

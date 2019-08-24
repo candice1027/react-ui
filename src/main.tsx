@@ -1,12 +1,13 @@
 import React from 'react';
-import Icon from '../lib/icon/icon';
-import { Route } from 'react-router'
+import IconExample from '../lib/icon/icon.example';
+import ButtonExample from '../lib/button/button.example';
+import { Route } from 'react-router-dom'
 
 export default function Main() {
     return (
         <main>
-            <Route path="/icon" component={Icon}></Route> 
-            <Route path="/button" component={Icon}></Route>  
+            <Route path="/icon" component={IconExample}></Route> 
+            <Route path="/button" component={ButtonExample}></Route> 
         </main>
     )
 }
