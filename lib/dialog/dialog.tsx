@@ -1,4 +1,5 @@
 import React, { Fragment, ReactElement } from 'react'
+import ReactDOM from 'react-dom';
 import './dialog.scss'
 import Icon from '../icon/icon';
 import {scopeClassMaker} from '../utils/scopeclass'
@@ -20,7 +21,7 @@ const Dialog: React.FunctionComponent<Props> = (props)=>{
             props.onCloseDialog(e)
         }
     }
-    return (
+    const dialogDom = 
         props.visible ? 
         <Fragment>
             <div 
@@ -50,7 +51,12 @@ const Dialog: React.FunctionComponent<Props> = (props)=>{
             </div>
         </Fragment> :
         null
-    )
+    return (
+        ReactDOM.createPortal(
+            dialogDom,
+            document.body
+        ) 
+    )   
 }
 Dialog.defaultProps = {
     closeOnClickMask: true
