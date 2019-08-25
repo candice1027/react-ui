@@ -6,7 +6,7 @@ import {scopeClassMaker} from '../utils/scopeclass'
 
 interface Props{
     visible: boolean,
-    buttons: Array<ReactElement>,
+    buttons?: Array<ReactElement>,
     onCloseDialog: React.MouseEventHandler,
     closeOnClickMask?: boolean
 }
@@ -44,7 +44,7 @@ const Dialog: React.FunctionComponent<Props> = (props)=>{
                     {props.children}
                 </main>
                 <footer className={joinClass('footer')}>
-                    {props.buttons.map((item,index)=>{
+                    {props.buttons && props.buttons.map((item,index)=>{
                         return React.cloneElement(item,{key:index})
                     })}
                 </footer>
@@ -58,7 +58,29 @@ const Dialog: React.FunctionComponent<Props> = (props)=>{
         ) 
     )   
 }
+
+const alertDialog = (content:string) =>{
+  const dialogComponent = <Dialog 
+        visible={true}
+        onCloseDialog={()=>{
+            ReactDOM.render(
+                React.cloneElement(dialogComponent,{visible:false}),
+                currDiv
+            )
+            ReactDOM.unmountComponentAtNode(currDiv)
+            currDiv.remove();
+        }}
+    >
+      {content}
+  </Dialog>
+  //创建一个临时div
+  const currDiv = document.createElement('div')
+  document.body.append(currDiv)
+   //将组件渲染到div上
+   ReactDOM.render(dialogComponent,currDiv)
+}
 Dialog.defaultProps = {
     closeOnClickMask: true
 }
+export {alertDialog}
 export default Dialog
