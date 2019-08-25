@@ -1,7 +1,7 @@
 import React ,{useState} from 'react'
 import Dialog, { alertDialog,confirmDialog,modal} from './dialog'
 export default function() {
-    const [isVisible,changeVisible] = useState(true)
+    const [isVisible,changeVisible] = useState(false)
     const changeDialogVisible = ()=>{
         changeVisible(!isVisible)
     }
@@ -25,7 +25,7 @@ export default function() {
                 visible={isVisible} 
                 buttons={[
                         <button onClick={closeDialog}>cancel</button>,
-                        <button>ok</button>
+                        <button onClick={closeDialog}>ok</button>
                     ]}
                 onCloseDialog={closeDialog}
                 closeOnClickMask = {true}

@@ -1,0 +1,26 @@
+
+.mylayout {
+    height: 300px;
+    color: #fff;
+}
+.myheader,.mycontent,.myfooter,.myasider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.myheader {
+    background: #7dbcea;
+    height: 40px;
+}
+.mycontent {
+    background-color: rgba(16, 142, 233, 1);
+}
+.myfooter {
+    background: #7dbcea;
+    height: 40px;
+}
+.myasider {
+    width: 100px;
+    background-color: #3ba0e9;
+    color: #fff;
+}

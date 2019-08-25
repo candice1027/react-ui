@@ -1,0 +1,18 @@
+@import '../util';
+.lv-layout{
+    display: flex;
+    flex-direction: column;
+    & &{
+        flex:1;
+        flex-direction: row;
+    }
+    &_content {
+        flex: 1;
+    }
+    &.hasAside {
+        flex-direction: row;
+        .lv-layout {
+            flex-direction: column;
+        }
+    }
+}

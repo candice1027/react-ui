@@ -105,31 +105,6 @@ const confirmDialog = (content: string, yesCb?: ()=>void, noCb?: ()=>void) =>{
     ]
     const closeModal = modal(content,buttons)
 }
-
-
-//const modalDialog = (content: ReactNode | ReactFragment) =>{
-    // const onClose = ()=>{
-    //     ReactDOM.render(
-    //         React.cloneElement(component,{visible:false}),
-    //         currDiv
-    //     )
-    //     ReactDOM.unmountComponentAtNode(currDiv)
-    //     currDiv.remove();
-    // }
-    // const component = <Dialog
-    //     visible = {true}
-    //     onCloseDialog = {()=>{onClose()}}
-    // >
-    //     {content}
-    // </Dialog>
-    // const currDiv = document.createElement('div');
-    // document.body.append(currDiv);
-    // ReactDOM.render(
-    //     component,
-    //     currDiv
-    // )
-    // return onClose;
-//}
 Dialog.defaultProps = {
     closeOnClickMask: true
 }

@@ -9,6 +9,7 @@ export default function Sider() {
                     <li><Link to="/icon" >Icon</Link></li>
                     <li><Link to="/button" >button</Link></li>
                     <li><Link to="/dialog" >对话框</Link></li>
+                    <li><Link to="/layout" >布局</Link></li>
                 </ul>
         </aside>
     )
