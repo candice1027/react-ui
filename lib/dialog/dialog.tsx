@@ -6,20 +6,31 @@ import {scopeClassMaker} from '../utils/scopeclass'
 interface Props{
     visible: boolean,
     buttons: Array<ReactElement>,
-    onCloseDialog: React.MouseEventHandler
+    onCloseDialog: React.MouseEventHandler,
+    closeOnClickMask?: boolean
 }
 
 const joinClass = scopeClassMaker('lv-dialog')
-
 const Dialog: React.FunctionComponent<Props> = (props)=>{
+    const onClickClose:React.MouseEventHandler = (e)=>{
+        props.onCloseDialog(e)
+    }
+    const onClickMask:React.MouseEventHandler = (e) =>{
+        if (props.closeOnClickMask) {
+            props.onCloseDialog(e)
+        }
+    }
     return (
         props.visible ? 
         <Fragment>
-            <div className={joinClass('mask')}></div>
+            <div 
+                className={joinClass('mask')}
+                onClick={onClickMask}
+            ></div>
             <div className={joinClass('content')}>
                 <button 
                     className={joinClass('close')}
-                    onClick={props.onCloseDialog}
+                    onClick={onClickClose}
                 >
                     <div className="close-icon">
                         <Icon name="close" />
@@ -40,5 +51,8 @@ const Dialog: React.FunctionComponent<Props> = (props)=>{
         </Fragment> :
         null
     )
+}
+Dialog.defaultProps = {
+    closeOnClickMask: true
 }
 export default Dialog

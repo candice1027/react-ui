@@ -10,12 +10,14 @@ export default function() {
     }
     return (
         <div>
-            <Dialog visible={isVisible} 
+            <Dialog 
+            visible={isVisible} 
             buttons={[
                     <button onClick={closeDialog}>cancel</button>,
                     <button>ok</button>
                 ]}
             onCloseDialog={closeDialog}
+            closeOnClickMask = {true}
             >
                 <p>这里是dialog内容</p>
             </Dialog>
