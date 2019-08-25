@@ -1,10 +1,12 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, ReactElement } from 'react'
 import './dialog.scss'
 import Icon from '../icon/icon';
 import {scopeClassMaker} from '../utils/scopeclass'
 
 interface Props{
-    visible: boolean
+    visible: boolean,
+    buttons: Array<ReactElement>,
+    onCloseDialog: React.MouseEventHandler
 }
 
 const joinClass = scopeClassMaker('lv-dialog')
@@ -15,7 +17,10 @@ const Dialog: React.FunctionComponent<Props> = (props)=>{
         <Fragment>
             <div className={joinClass('mask')}></div>
             <div className={joinClass('content')}>
-                <button className={joinClass('close')}>
+                <button 
+                    className={joinClass('close')}
+                    onClick={props.onCloseDialog}
+                >
                     <div className="close-icon">
                         <Icon name="close" />
                     </div>
@@ -27,8 +32,9 @@ const Dialog: React.FunctionComponent<Props> = (props)=>{
                     {props.children}
                 </main>
                 <footer className={joinClass('footer')}>
-                    <button>cancel</button>
-                    <button>ok</button>
+                    {props.buttons.map((item,index)=>{
+                        return React.cloneElement(item,{key:index})
+                    })}
                 </footer>
             </div>
         </Fragment> :

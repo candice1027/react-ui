@@ -5,9 +5,18 @@ export default function() {
     const changeDialogVisible = ()=>{
         changeVisible(!isVisible)
     }
+    const closeDialog = () =>{
+        changeVisible(false)
+    }
     return (
         <div>
-            <Dialog visible={isVisible}>
+            <Dialog visible={isVisible} 
+            buttons={[
+                    <button onClick={closeDialog}>cancel</button>,
+                    <button>ok</button>
+                ]}
+            onCloseDialog={closeDialog}
+            >
                 <p>这里是dialog内容</p>
             </Dialog>
             <button onClick={changeDialogVisible}>click change</button>
