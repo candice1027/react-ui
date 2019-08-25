@@ -79,8 +79,41 @@ const alertDialog = (content:string) =>{
    //将组件渲染到div上
    ReactDOM.render(dialogComponent,currDiv)
 }
+
+const confirmDialog = (content: string, onOk: ()=>void, onCancel: ()=>void) =>{
+    onCancel = ()=>{
+        ReactDOM.render(
+            React.cloneElement(component,{visible:false}),
+            currDiv
+        )
+        ReactDOM.unmountComponentAtNode(currDiv)
+        currDiv.remove();
+    }
+    onOk = ()=>{
+        ReactDOM.render(
+            React.cloneElement(component,{visible:false}),
+            currDiv
+        )
+        ReactDOM.unmountComponentAtNode(currDiv)
+        currDiv.remove();
+    }
+    const component = <Dialog
+      visible={true}
+      onCloseDialog = {onCancel}
+      buttons = {[
+        <button onClick={onCancel}>cancel</button>,
+        <button onClick={onOk}>ok</button>
+      ]}
+    >{content}</Dialog>
+    const currDiv = document.createElement('div')
+    document.body.append(currDiv)
+    ReactDOM.render(
+        component,
+        currDiv
+    )
+}
 Dialog.defaultProps = {
     closeOnClickMask: true
 }
-export {alertDialog}
+export {alertDialog,confirmDialog}
 export default Dialog

@@ -1,5 +1,5 @@
 import React ,{useState} from 'react'
-import Dialog, { alertDialog } from './dialog'
+import Dialog, { alertDialog,confirmDialog} from './dialog'
 export default function() {
     const [isVisible,changeVisible] = useState(true)
     const changeDialogVisible = ()=>{
@@ -23,6 +23,14 @@ export default function() {
             </Dialog>
             <button onClick={changeDialogVisible}>click change</button>
             <button onClick={()=>{alertDialog('this is alertdialog')}}>alert dialog</button>
+            <button onClick={()=>{
+                    confirmDialog(
+                        'this is confirmdialog',
+                        ()=>{console.log('yes')},
+                        ()=>{console.log('no')}
+                    )
+                }
+            }>confirm dialog</button>
         </div>
     )
 }
