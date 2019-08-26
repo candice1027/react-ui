@@ -2,18 +2,14 @@
 .lv-layout{
     display: flex;
     flex-direction: column;
-    & &{
-        flex:1;
-        flex-direction: row;
+    & & {
+        flex: 1;
     }
     &_content {
         flex: 1;
     }
     &.hasAside {
         flex-direction: row;
-        .lv-layout {
-            flex-direction: column;
-        }
     }
 }
 

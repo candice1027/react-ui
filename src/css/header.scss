@@ -1,11 +1,13 @@
 .web-header {
     height: 80px;
-    background: #eceff1;
+    background: #fff;
+    // background: #eceff1;
     color: #78909c;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-right: 20px;
+    box-shadow: 0 0 6px rgba(0,0,0,.4);
     .logo {
         padding-left: 15px;
         img {

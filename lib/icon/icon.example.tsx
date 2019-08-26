@@ -4,7 +4,7 @@ import './icon.example.scss'
 const IconExample:React.FunctionComponent = () =>{
     return (
         <div>
-            <p>icon list </p>
+            <div>Icon 图标</div>
             <ul>
                 <li><Icon name="wechat"></Icon></li>
                 <li><Icon name="alipay"></Icon></li>
