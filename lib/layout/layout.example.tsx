@@ -1,9 +1,5 @@
 import React from 'react';
-import Layout from './layout'
-import Header from './header'
-import Content from './content'
-import Footer from './footer'
-import Asider from './asider'
+import {Layout,Header,Content,Footer,Asider} from './layout'
 import './layout.example.scss'
 const LayoutExample: React.FunctionComponent = () =>{
     return (
