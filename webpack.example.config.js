@@ -15,6 +15,7 @@ module.exports = Object.assign({},base,{
     ],
     plugins:[
       new HtmlWebpackPlugin({
+        title: 'react ui 官网',
         template: 'example.html',
         filename: 'example.html'
       })
