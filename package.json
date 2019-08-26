@@ -23,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/candice1027/react-ui/issues"
   },
-  "homepage": "https://github.com/candice1027/react-ui#readme",
+  "homepage": "https://github.com/candice1027/react-ui/example",
   "devDependencies": {
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
