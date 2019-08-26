@@ -12,6 +12,7 @@ interface Props extends React.HTMLAttributes<HTMLElement> {
 const Layout:React.FunctionComponent<Props> = (props) =>{
     const {className,...reset} = props
     const children = props.children as Array<ReactElement>
+    //遍历children 查看children 的type是否有asider有的话就加上class名
     const hasAside = children.length && 
         children.reduce((result,node)=> {
               return result || node.type === Asider
@@ -25,3 +26,9 @@ const Layout:React.FunctionComponent<Props> = (props) =>{
     )
 }
 export default Layout
+
+export { Layout }
+export { default as Header } from './header'
+export { default as Content } from './content'
+export { default as Asider } from './asider'
+export { default as Footer } from './footer'

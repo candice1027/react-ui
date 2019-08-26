@@ -4,10 +4,11 @@ import ButtonExample from '../lib/button/button.example';
 import DialogExample from '../lib/dialog/dialog.example';
 import LayoutExample from '../lib/layout/layout.example';
 import { Route } from 'react-router-dom'
+import './css/main.scss'
 
 export default function Main() {
     return (
-        <main>
+        <main className="my-main">
             <Route path="/icon" component={IconExample}></Route> 
             <Route path="/button" component={ButtonExample}></Route> 
             <Route path="/dialog" component={DialogExample}></Route> 

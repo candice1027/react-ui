@@ -1,15 +1,16 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import './css/asider.scss';
+import { NavLink} from 'react-router-dom'
 
 export default function Sider() {
     return (
-        <aside>
+        <aside className="site-aside">
             <h2>组件</h2>
                 <ul>
-                    <li><Link to="/icon" >Icon</Link></li>
-                    <li><Link to="/button" >button</Link></li>
-                    <li><Link to="/dialog" >对话框</Link></li>
-                    <li><Link to="/layout" >布局</Link></li>
+                    <li><NavLink to="/icon" >Icon</NavLink></li>
+                    <li><NavLink to="/button" >button</NavLink></li>
+                    <li><NavLink to="/dialog" >对话框</NavLink></li>
+                    <li><NavLink to="/layout" >布局</NavLink></li>
                 </ul>
         </aside>
     )

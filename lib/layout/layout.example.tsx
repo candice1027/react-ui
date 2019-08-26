@@ -7,7 +7,7 @@ import Asider from './asider'
 import './layout.example.scss'
 const LayoutExample: React.FunctionComponent = () =>{
     return (
-        <div>
+        <div className="mylayout-box">
             <p>上中下布局</p>
              <Layout className="mylayout">
                 <Header className="myheader">header </Header>
