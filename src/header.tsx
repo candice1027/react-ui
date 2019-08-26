@@ -11,7 +11,9 @@ export default function Header() {
                 <img src={logo} alt=""/>
             </div>  
             <div className="github">
-                <Icon className="github-icon" name="github" />
+                <a href="https://github.com/candice1027/react-ui" target="_blank">
+                    <Icon className="github-icon" name="github" />
+                </a>
             </div>  
         </header>
     )
