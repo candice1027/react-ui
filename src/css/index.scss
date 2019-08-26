@@ -8,3 +8,14 @@
     color: #999;
     border-top: 1px solid #eee;
 }
+pre {
+    padding: 10px;
+    font-family: "Fira Code Medium", Consolas;
+    line-height: 1.4;
+}
+.show-code {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+}

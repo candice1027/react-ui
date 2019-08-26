@@ -1,11 +1,22 @@
 import React from 'react'
 import Icon from './icon'
+import './icon.example.scss'
 const IconExample:React.FunctionComponent = () =>{
     return (
         <div>
-            hello icon
-            <Icon name="wechat"></Icon>
-            {/* <Icon name="setting"></Icon> */}
+            <p>icon list </p>
+            <ul>
+                <li><Icon name="wechat"></Icon></li>
+                <li><Icon name="alipay"></Icon></li>
+                <li><Icon name="weibo"></Icon></li>
+                <li><Icon name="github"></Icon></li>
+                <li><Icon name="email"></Icon></li>
+                <li><Icon name="location"></Icon></li>
+                <li><Icon name="taobao"></Icon></li>
+                <li><Icon name="error"></Icon></li>
+                <li><Icon name="warn"></Icon></li>
+            </ul> 
+            
         </div>
     )
 }
