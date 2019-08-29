@@ -11,6 +11,7 @@ export default function Sider() {
                     {/* <li><NavLink to="/button" >button</NavLink></li> */}
                     <li><NavLink to="/dialog" >对话框</NavLink></li>
                     <li><NavLink to="/layout" >布局</NavLink></li>
+                    <li><NavLink to="/form" >表单</NavLink></li>
                 </ul>
         </aside>
     )
